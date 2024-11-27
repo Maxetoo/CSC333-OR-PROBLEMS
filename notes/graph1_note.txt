@@ -1,0 +1,32 @@
+Maximizing Profit for a Factory
+Objective:
+We aim to maximize the total profit for a factory that produces two products (A and B). The factory has constraints on machine time and raw materials.
+
+Approach:
+
+Profit Function:
+The objective is to maximize the total profit from both products. Each unit of product A contributes N3 to the profit, and each unit of product B contributes N4. So, the objective function to maximize is:
+
+
+Profit=3A+4B
+Constraints:
+There are two primary constraints:
+
+Machine time: Product A requires 2 hours of machine time, and product B requires 3 hours. The total available machine time is 12 hours. Hence, the constraint is:
+2A+3B≤12
+Raw material: Product A requires 1 unit of raw material, and product B requires 2 units. The total available raw material is 8 units. Hence, the constraint is:
+A+2B≤8
+We also have non-negativity constraints, as you cannot produce a negative quantity of products:
+
+
+A≥0,B≥0
+Optimization:
+To maximize the profit, we need to convert this into a linear programming problem that can be solved using an optimization solver. Since linprog minimizes a function, we negate the profit function to transform the maximization problem into a minimization problem:
+
+
+Objective function=−3A−4B
+Solving with linprog:
+We use the linprog function from scipy.optimize to solve the problem. The output will give the optimal values of A and B that maximize the profit while respecting the constraints.
+
+Graphical Interpretation:
+We can visualize the feasible region defined by the constraints, which is the area where both constraints are satisfied. The optimal solution will be the point in this region that maximizes the profit, which can be plotted.

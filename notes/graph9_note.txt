@@ -1,0 +1,17 @@
+Advertising Campaign Budget Allocation
+Objective:
+Maximize the reach of two advertising campaigns (A and B) given constraints on television, print media, and social media budgets.
+
+Approach:
+
+Reach Function:
+The objective is to maximize the total reach of both campaigns. The reach for campaign A is 500,000 people, and for B, it's 400,000 people. We aim to maximize the reach by allocating the budget accordingly.
+
+Budget Constraints:
+The constraints are based on how much budget is available for television, print media, and social media. Each campaign has specific budget requirements for each medium, and the total budget for each medium is limited.
+
+Optimization with linprog:
+We use linprog to solve this linear programming problem. The objective function is negated to convert it into a minimization problem, and the constraints are added for each budget and campaign.
+
+Visualization:
+The feasible region is plotted, showing the area where the budget constraints are satisfied. The optimal solution is highlighted, indicating the best allocation of the advertising budget.

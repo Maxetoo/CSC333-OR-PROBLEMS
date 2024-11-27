@@ -1,0 +1,33 @@
+Maximizing Production with Multiple Resources
+Objective:
+We are maximizing the total profit for a factory producing two products (A and B), using labor, material, and machine time as resources.
+
+Approach:
+
+Profit Function:
+The objective is to maximize the total profit from products A and B. Product A generates a profit of N5 per unit, and product B generates a profit of N4 per unit. The objective function to maximize is:
+
+Profit=5A+4B
+Constraints:
+There are three constraints related to the resources (labor, material, and machine time):
+
+Labor: Product A requires 2 hours of labor, and product B requires 1 hour. The total available labor is 20 hours. Hence, the constraint is:
+2A+B≤20
+Material: Product A requires 3 units of material, and product B requires 2 units. The total available material is 30 units. Hence, the constraint is:
+3A+2B≤30
+Machine time: Product A requires 1 hour of machine time, and product B requires 2 hours. The total available machine time is 18 hours. Hence, the constraint is:
+
+A+2B≤18
+We also have non-negativity constraints:
+
+A≥0,B≥0
+Optimization:
+This is a linear programming problem with multiple resources, so we use the same approach as before: converting the maximization problem into a minimization problem by negating the objective function.
+
+
+Objective function=−5A−4B
+Solving with linprog:
+We use linprog to find the optimal number of products A and B that maximize the profit while respecting the constraints on labor, material, and machine time.
+
+Graphical Interpretation:
+In this case, we would plot the feasible region in a three-dimensional space, where the constraints form planes. The optimal solution lies at the point that maximizes the profit within the feasible region. We can visualize this 3D plot and identify the optimal values.

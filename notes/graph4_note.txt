@@ -1,0 +1,21 @@
+Maximizing Revenue from Sales
+Objective:
+We are tasked with maximizing the total revenue by selecting the right combination of products A and B under budget and production constraints.
+
+Approach:
+
+Profit Function:
+The objective is to maximize revenue from two products. We express this as a linear function of products A and B, where the coefficients are the revenue values (N4 for A and N5 for B). To solve this with linear programming, we need to express the maximization problem as a minimization problem. This is achieved by negating the coefficients (-4 for A and -5 for B).
+
+Constraints:
+There are three constraints:
+
+The advertisement cost per unit of A and B.
+The production capacity required for each unit of A and B.
+These constraints are represented as linear inequalities (Ax ≤ b). For each constraint, we write down the coefficients of A and B and the right-hand side values, which represent the maximum values for budget and capacity.
+Optimization with linprog:
+scipy.optimize.linprog is used to solve this linear programming problem. It minimizes the objective function subject to the given constraints. Since linprog minimizes by default, we negate the objective function to maximize the revenue.
+
+Solution and Visualization:
+The optimal quantities of products A and B are found using linprog. We also visualize the feasible region defined by the constraints to help us understand the limits imposed by the problem. The feasible region is plotted as the area where all constraints are satisfied, and the optimal solution is marked on the graph.
+

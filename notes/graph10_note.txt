@@ -1,0 +1,17 @@
+Meal Planning for a School Cafeteria
+Objective:
+Maximize the revenue from selling meals A and B in the cafeteria, subject to constraints on meat, vegetables, and rice availability.
+
+Approach:
+
+Revenue Function:
+The revenue from meal A is N6, and from meal B is N5. The objective is to maximize the revenue, so the function is written as 6A + 5B. We negate the coefficients for maximization.
+
+Resource Constraints:
+The constraints are based on the availability of meat, vegetables, and rice. Each type of meal requires a specific amount of each resource. These constraints ensure that the cafeteria does not exceed the available resources.
+
+Linear Programming:
+The optimization is performed using linprog, which gives us the optimal number of meals A and B to prepare and serve to maximize revenue.
+
+Graphical Representation:
+The feasible region is plotted to show where all resource constraints are satisfied. The optimal solution is marked, indicating how many units of each meal should be prepared.

@@ -1,0 +1,17 @@
+Maximizing Revenue from Two Products
+Objective:
+This problem involves maximizing revenue from two products, P1 and P2, subject to labor, raw material, and machine time constraints.
+
+Approach:
+
+Revenue Function:
+The objective function is the revenue from the sale of products, 10P1 + 12P2. We aim to maximize this, so the function is negated for use with linprog.
+
+Constraints:
+The constraints represent the limits on labor, raw materials, and machine time. Each product consumes a certain amount of these resources, and we have upper limits on the total available amounts.
+
+Linear Programming:
+The optimization is performed using linprog, which minimizes the negative revenue function. The solution gives the optimal number of products P1 and P2 to produce to maximize revenue.
+
+Graphical Analysis:
+The feasible region is plotted to visually represent the space where all constraints are satisfied. The optimal point is highlighted, indicating the best production strategy.

@@ -1,0 +1,17 @@
+Production Planning for a Bakery
+Objective:
+We are maximizing the total profit of selling two types of cakes, chocolate and vanilla, subject to constraints on time and resources (flour and baking time).
+
+Approach:
+
+Profit Function:
+The profit function is defined as 5C + 3V, where C is the number of chocolate cakes and V is the number of vanilla cakes. We want to maximize this, so the coefficients of this function are negated.
+
+Constraints:
+The constraints include the total available baking time and the available flour. These are expressed as linear inequalities (e.g., 1C + 2V ≤ 8 for baking time, 3C + 2V ≤ 12 for flour). We need to ensure that the sum of cake production respects these limits.
+
+Optimization:
+The problem is solved using linprog, which gives us the values of C and V that maximize profit while satisfying the time and resource constraints.
+
+Graphical Interpretation:
+The feasible region is visualized, showing where the constraints intersect. This helps us understand which combination of cakes maximizes profit.

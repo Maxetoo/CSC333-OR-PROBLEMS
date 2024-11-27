@@ -1,0 +1,17 @@
+Resource Allocation for Two Projects
+Objective:
+The goal is to allocate resources (labor and capital) between two projects (P1 and P2) to maximize profit.
+
+Approach:
+
+Profit Function:
+The total profit is the sum of profits from projects P1 and P2, given by the expression 8P1 + 7P2. This is a maximization problem, so again we negate the profit coefficients to make it suitable for the minimization function of linprog.
+
+Constraints:
+The constraints are given by labor and capital requirements for both projects. Each project requires a certain amount of labor and capital, and we have upper limits on these resources. These are again linear inequalities represented by the system Ax ≤ b.
+
+Solving the Problem:
+Using linprog, we minimize the negative of the profit function while adhering to the resource constraints. This will give us the optimal allocation of resources to maximize profit.
+
+Result and Interpretation:
+The result gives us the optimal number of projects P1 and P2 to undertake, maximizing the company's total profit under the resource limitations.

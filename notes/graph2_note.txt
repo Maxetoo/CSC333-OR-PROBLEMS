@@ -1,0 +1,27 @@
+Minimizing Cost for a Manufacturer
+Objective:
+We are tasked with minimizing the cost of production for a manufacturer producing two products (X and Y) with constraints on labor and material.
+
+Approach:
+
+Cost Function:
+The objective is to minimize the total production cost, where each unit of product X costs N2 to produce, and each unit of product Y costs N5. The objective function to minimize is:
+Cost=2X+5Y
+Constraints:
+There are two primary constraints:
+
+Labor: Product X requires 1 hour of labor, and product Y requires 2 hours. The total available labor is 6 hours. Hence, the constraint is:
+X+2Y≤6
+Material: Product X requires 2 units of material, and product Y requires 1 unit. The total available material is 5 units. Hence, the constraint is:
+2X+Y≤5
+We also have non-negativity constraints:
+
+X≥0,Y≥0
+Optimization:
+To minimize the cost, we again use linprog, where the objective function is negated (for minimization) and the constraints are entered as inequalities.
+
+Solving with linprog:
+The optimal solution will give us the values of X and Y that minimize the total cost while satisfying the labor and material constraints.
+
+Visualization:
+As with the first problem, we can visualize the feasible region on a graph. The feasible area is bounded by the labor and material constraints, and the optimal point will be the one that minimizes the total cost.

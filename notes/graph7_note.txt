@@ -1,0 +1,18 @@
+Minimizing Cost for a Transport Company
+Objective:
+The company seeks to minimize the total cost of transporting goods using two vehicle types (X and Y), with constraints on fuel and driver time.
+
+Approach:
+
+Cost Function:
+The objective is to minimize the total cost, which is expressed as 6X + 7Y, where X and Y are the number of trips using vehicle X and Y, respectively.
+
+Constraints:
+The constraints are fuel and driver time limitations. For each vehicle, we know how much fuel and driver time each trip requires, and we have upper limits on both. These constraints are written as linear inequalities.
+
+Optimization:
+The linprog function is used to minimize the cost function while adhering to the constraints of fuel and driver time. The result gives us the optimal number of trips for each vehicle type to minimize the transport cost.
+
+Visualization:
+The feasible region defined by the constraints is visualized, showing where all conditions are satisfied. The optimal point is marked on the graph, indicating the number of trips for each vehicle.
+
